@@ -1,4 +1,3 @@
-import { executionAsyncResource } from 'async_hooks';
 import { createClient } from 'microcms-js-sdk';
 import type {
   MicroCMSQueries,
@@ -43,7 +42,6 @@ export const getMembersList = async (queries?: MicroCMSQueries) => {
     endpoint: 'members',
     queries,
   });
-
   return listData;
 };
 
@@ -77,5 +75,6 @@ export const getCategoryDetail = async (
     contentId,
     queries,
   });
+
   return detailData;
 };
